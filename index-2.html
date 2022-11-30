@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .btn{
+        padding: 16px 32px;
+        font-size: 15px;
+        position: relative;
+         top: 10rem;
+         margin: 30px;
+         font-weight: bold;
+         background-color: #ff4400;
+         opacity: 0.6;
+         transition: 0.5s;
+    }
+    .btn:hover{
+        cursor: pointer;
+        background-color: #fa4300;
+        opacity: 1;
+        color: white;
+    }
+    .div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+<body>
+    <button class="btn" onclick="lightOn()">Turn On the light</button>
+    <img id="On" src="/bulboff.jpg" alt="">
+    <button class="btn" onclick="lightOff()">Turn Off the light</button>
+
+    <script>
+        function lightOn(){
+            document.getElementById('On').src = "/bulbOn.jpg";
+        }
+        function lightOff(){
+            document.getElementById('On').src = "/bulboff.jpg";
+        }
+    </script>
+</body>
+</html>
